@@ -1,122 +1,149 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import './App.css';
+
+const aprendizados = [
+  'Lógica de programação',
+  'Desenvolvimento web',
+  'Frontend',
+  'Backend',
+  'Banco de dados',
+  'Desenvolvimento de APIs',
+  'Aplicativos',
+  'Versionamento de código',
+];
+
+const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'SQL', 'Git', 'GitHub'];
+
+const areas = [
+  'Dev Frontend',
+  'Dev Backend',
+  'Dev Full Stack',
+  'Dev de Aplicações',
+  'Banco de Dados',
+  'Suporte e Manutenção',
+];
+
+const projetos = [
+  'Cadastro de clientes',
+  'Sistema de estoque',
+  'Aplicação de agendamentos',
+  'Loja virtual',
+  'Dashboard administrativo',
+  'Aplicativo de tarefas',
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+    <div>
+      <header className="header">
+        <h2>Técnico em Dev. Sistemas | SENAI</h2>
+        <nav>
+          <a href="#hero">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#aprendizados">O que aprende</a>
+          <a href="#tecnologias">Tecnologias</a>
+          <a href="#atuacao">Atuação</a>
+          <a href="#projetos">Projetos</a>
+        </nav>
+      </header>
+
+      <section id="hero" className="hero">
         <div>
-          <h1>Get started</h1>
+          <h1>Transforme ideias em sistemas.</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Desenvolva soluções, aprenda novas tecnologias e construa seu futuro na área de TI.
           </p>
+          <a href="#cta" className="btn">
+            Quero Conhecer
+          </a>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+
+        <img
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500"
+          alt="Tecnologia"
+        />
       </section>
 
-      <div className="ticks"></div>
+      <section id="sobre" className="section bg-alt">
+        <h2>Sobre o Curso</h2>
+        <p>
+          <strong>Desenvolvimento de Sistemas:</strong> Criação e manutenção de softwares e sistemas
+          web.
+        </p>
+        <p>
+          <strong>Objetivo:</strong> Capacitar você para dominar programação, bancos de dados e
+          tecnologia.
+        </p>
+        <p>
+          <strong>O que faz:</strong> Desenvolve páginas web, constrói APIs e resolve problemas
+          corporativos.
+        </p>
+      </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      <section id="aprendizados" className="section">
+        <h2>O que você aprende</h2>
+        <div className="grid">
+          {aprendizados.map(function (item) {
+            return (
+              <div key={item} className="card">
+                {item}
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <section id="tecnologias" className="section bg-alt">
+        <h2>Tecnologias</h2>
+        <div className="tags">
+          {tecnologias.map(function (tech) {
+            return (
+              <span key={tech} className="tag">
+                {tech}
+              </span>
+            );
+          })}
+        </div>
+      </section>
+
+      <section id="atuacao" className="section">
+        <h2>Áreas de Atuação</h2>
+        <div className="grid">
+          {areas.map(function (area) {
+            return (
+              <div key={area} className="card">
+                {area}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section id="projetos" className="section bg-alt">
+        <h2>Exemplos de Projetos</h2>
+        <div className="grid">
+          {projetos.map(function (proj) {
+            return (
+              <div key={proj} className="card">
+                {proj}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section id="cta" className="cta">
+        <h2>Seu futuro na tecnologia pode começar aqui.</h2>
+        <p>Conheça o curso Técnico em Desenvolvimento de Sistemas.</p>
+        <a href="#hero" className="btn">
+          Voltar ao topo
+        </a>
+      </section>
+
+      <footer className="footer">
+        <p>Técnico em Desenvolvimento de Sistemas — SENAI 2026 | Aluno: Murilo Moraes Machado</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
