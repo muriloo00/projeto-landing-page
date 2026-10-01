@@ -1,19 +1,34 @@
-# React + Vite
+# 🚀 Landing Page - Curso Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page moderna, responsiva e performática desenvolvida para a apresentação e conversão de vendas de um curso online.
 
-Currently, two official plugins are available:
+## 📌 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto consiste em uma página de destino (*landing page*) criada com **React** e **Vite**, focada em oferecer uma excelente experiência de usuário e alta performance visual para a divulgação de um curso.
 
-## React Compiler
+- **Status do Projeto:** 🛠️ Em desenvolvimento / Concluído
+- **Tecnologias principais:** React, Vite, CSS3, JavaScript
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **[React](https://react.dev/)** - Biblioteca JavaScript para construção de interfaces.
+- **[Vite](https://vitejs.dev/)** - Build tool e ambiente de desenvolvimento ultra-rápido.
+- **[CSS3](#)** - Estilização customizada e responsiva.
+- **[ESLint](https://eslint.org/)** - Padronização e qualidade de código.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💻 Como Executar o Projeto Localmente
+
+### Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- Gerenciador de pacotes (`npm` ou `yarn`)
+
+### Passo a passo
+
+1. **Clone este repositório:**
+   ```bash
+   git clone [https://github.com/muriloo00/projeto-landing-page.git](https://github.com/muriloo00/projeto-landing-page.git)
